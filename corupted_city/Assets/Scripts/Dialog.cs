@@ -41,9 +41,12 @@ public class Dialog : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isIn = true;
-        dialog.SetActive(true);
-        text.text = "Press E";
+        if(collision.tag == "Player")
+        {
+            isIn = true;
+            dialog.SetActive(true);
+            text.text = "Press E";
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
