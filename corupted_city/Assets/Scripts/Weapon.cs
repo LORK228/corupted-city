@@ -7,17 +7,27 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet;
     [SerializeField] private float _waintSecondsShoot;
+
+    private int _shotgunAmmunition;
+    private Vector2 _minAndMaxRotateShootGun;
+
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
     private Vector2 _mousePos;
     private Transform _shootPoint;
     private bool _canShoot;
     private bool inMovement => GetComponentInParent<Movement>() != null;
-
+    ShotGun shotgun => GetComponent<ShotGun>();
 
     private void Start()
     {
         _canShoot = true;
         _shootPoint = GetComponentInChildren<ShootPoint>().transform;
+        if(shotgun != null)
+        {
+            var shotgun = GetComponent<ShotGun>();
+            _shotgunAmmunition = shotgun.ShotgunAmmunition;
+            _minAndMaxRotateShootGun = shotgun.MinAndMaxRotateShootGun;
+        }
     }
 
     private void Update()
@@ -31,7 +41,10 @@ public class Weapon : MonoBehaviour
             transform.rotation = rotationToMouse;
             if (Input.GetMouseButton(0) && _canShoot)
             {
-                StartCoroutine(Shoot(_shootPoint.position, rotationToMouse));
+                if(shotgun != null)
+                    StartCoroutine(ShotgunShoot(_shootPoint.position, rotationToMouse));
+                else
+                    StartCoroutine(Shoot(_shootPoint.position, rotationToMouse));
             }
         }
     }
@@ -39,6 +52,20 @@ public class Weapon : MonoBehaviour
     private IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation)
     {
         Instantiate(_bullet, pointToShoot, rotation);
+        _canShoot = false;
+        yield return new WaitForSeconds(_waintSecondsShoot);
+        _canShoot = true;
+    }
+    private IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation)
+    {
+        var rotate = rotation.eulerAngles;
+        var rotateIznach = rotate;
+        for (int i = 0; i < _shotgunAmmunition; i++)
+        {
+            rotate = rotateIznach;
+            rotate.z += UnityEngine.Random.Range(_minAndMaxRotateShootGun.x, _minAndMaxRotateShootGun.y);
+            Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
+        }
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
         _canShoot = true;
