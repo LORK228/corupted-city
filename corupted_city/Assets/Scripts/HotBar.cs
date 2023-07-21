@@ -5,18 +5,23 @@ using UnityEngine;
 public class HotBar : MonoBehaviour
 {
     int ActiveSlot;
-    int MinOnPick;
+    float MinOnPick;
 
     float mw;
 
-    Transform PlayerTrfm;
+    [SerializeField] Transform PlayerTrfm;
     GameObject OnPickPrior;
-    
-    [HideInInspector] public List<GameObject> Items;
-    [HideInInspector] public List<GameObject> OnPickUpItems;
+
+    [SerializeField] private Sprite Active;
+    [SerializeField] private Sprite NonActive;
+    [SerializeField] private List<GameObject> Slots;
+    [HideInInspector] private List<GameObject> Items;
+    [HideInInspector] private List<GameObject> OnPickUpItems;
 
     void Start()
     {
+        OnPickUpItems = new List<GameObject>();
+        Items = new List<GameObject>();
         ActiveSlot = 0;
         PlayerTrfm = gameObject.transform;
         for (int i =0; i <3; i++)
@@ -27,15 +32,17 @@ public class HotBar : MonoBehaviour
     }
 
     void Update()
-    {
+    {   // приоритет и подбор оружия
         mw = Input.GetAxis("Mouse ScrollWheel");
         if (OnPickUpItems.Count != 0)
         {
-            for (int i=0; i < OnPickUpItems.Count; i++)
+            MinOnPick = 100000000;
+            for (int i = 0; i < OnPickUpItems.Count; i++)
             {
-                MinOnPick = 100000000;
-                if (Vector2.Distance(OnPickUpItems[i].transform.position, PlayerTrfm.position)<MinOnPick){
+
+                if (Vector2.Distance(OnPickUpItems[i].transform.position, PlayerTrfm.position) < MinOnPick) {
                     OnPickPrior = OnPickUpItems[i];
+                    MinOnPick = Vector2.Distance(OnPickUpItems[i].transform.position, PlayerTrfm.position);
                 }
             }
             //активировать меню 
@@ -48,6 +55,7 @@ public class HotBar : MonoBehaviour
                 else
                 {
                     Items[ActiveSlot] = OnPickPrior;
+
                 }
             }
         }
@@ -65,7 +73,7 @@ public class HotBar : MonoBehaviour
             else
             {
                 ActiveSlot += 1;
-            }    
+            }
         }
         if (mw < -0.1)
         {
@@ -91,17 +99,22 @@ public class HotBar : MonoBehaviour
         {
             ActiveSlot = 2;
         }
+        for (int i = 0; i < 3; i++) {
+            Slots[i].GetComponent<SpriteRenderer>().sprite = NonActive;
+        }
+        Slots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = Active;
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<HotBar>() != null){
+        if (collision.gameObject.GetComponent<Weapon>() != null){
             OnPickUpItems.Add(collision.gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<HotBar>() != null)
+        if (collision.gameObject.GetComponent<Weapon>() != null)
         {
             OnPickUpItems.Remove(collision.gameObject);
         }
