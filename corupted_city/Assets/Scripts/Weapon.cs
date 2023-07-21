@@ -7,10 +7,12 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet;
     [SerializeField] private float _waintSecondsShoot;
+    [SerializeField] public float flyDist;
 
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
-
+    private bool Flying;
+    private Vector2 startPoint;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
     private Vector2 _mousePos;
     private Transform _shootPoint;
@@ -69,5 +71,16 @@ public class Weapon : MonoBehaviour
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
         _canShoot = true;
+    }
+    public void Throw()
+    {
+        startPoint = transform.position;
+
+        gameObject.transform.parent = null;
+        while (Vector2.Distance(startPoint, transform.position) < flyDist) 
+        {
+            print(1);
+            transform.position = new Vector2(transform.position.x, transform.position.y + 1);
+        }
     }
 }

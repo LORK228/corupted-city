@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HotBar : MonoBehaviour
 {
-    int ActiveSlot;
+    public int ActiveSlot;
     float MinOnPick;
 
     float mw;
@@ -14,16 +14,15 @@ public class HotBar : MonoBehaviour
 
     [SerializeField] private Sprite Active;
     [SerializeField] private Sprite NonActive;
-    [SerializeField] private List<GameObject> Slots;
-    [HideInInspector] private List<GameObject> Items;
-    [HideInInspector] private List<GameObject> OnPickUpItems;
+    [SerializeField] public List<GameObject> Slots;
+    [HideInInspector] public List<GameObject> Items;
+    [HideInInspector] public List<GameObject> OnPickUpItems;
 
     void Start()
     {
         OnPickUpItems = new List<GameObject>();
         Items = new List<GameObject>();
         ActiveSlot = 0;
-        PlayerTrfm = gameObject.transform;
         for (int i =0; i <3; i++)
         {
             Items.Add(null);
@@ -36,7 +35,8 @@ public class HotBar : MonoBehaviour
         mw = Input.GetAxis("Mouse ScrollWheel");
         if (OnPickUpItems.Count != 0)
         {
-            MinOnPick = 100000000;
+            print(OnPickUpItems.Count);
+                MinOnPick = 100000000;
             for (int i = 0; i < OnPickUpItems.Count; i++)
             {
 
@@ -55,7 +55,12 @@ public class HotBar : MonoBehaviour
                 else
                 {
                     Items[ActiveSlot] = OnPickPrior;
-
+                    OnPickPrior.transform.parent = PlayerTrfm;
+                    print(OnPickPrior.GetComponent<SpriteRenderer>().sprite.name);
+                    print(Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().name);
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item=OnPickPrior;
+                    OnPickPrior.transform.localPosition = new Vector2(0f, -4f);
                 }
             }
         }
@@ -106,17 +111,5 @@ public class HotBar : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Weapon>() != null){
-            OnPickUpItems.Add(collision.gameObject);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Weapon>() != null)
-        {
-            OnPickUpItems.Remove(collision.gameObject);
-        }
-    }
+
 }
