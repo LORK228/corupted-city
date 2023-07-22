@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Sprite _dieSprite;
     
     private bool _itHaveGun => GetComponentInChildren<Weapon>() != null;
+    private bool _itHaveShotGun => GetComponentInChildren<ShotGun>() != null;
     private NavMeshAgent _agent;
     private Scaner2D _scanner;
     private bool _iSeeFirstTime;
@@ -24,31 +25,31 @@ public class EnemyAI : MonoBehaviour
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
         _iSee = false;
-        _shootPoint = GetComponentInChildren<ShootPoint>().transform;
         if (_itHaveGun)
         {
+            _shootPoint = GetComponentInChildren<ShootPoint>().transform;
             weapon = GetComponentInChildren<Weapon>();
         }
     }
 
     void Update()
     {
-        if (_itHaveGun)
-        {
-            _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 lookDir = _mousePos - new Vector2(transform.position.x, transform.position.y);
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-            var rotationToMouse = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = rotationToMouse;
-        }
-
         _iSee = _scanner.Scan();
         if (_scanner.Scan())
             _iSeeFirstTime = true;
         if((_iSeeFirstTime && _itHaveGun == false) || (_itHaveGun == true && _iSee == false && _iSeeFirstTime == true))
             _agent.SetDestination(_player.position);
-        if (_iSee && _itHaveGun == true)
-            weapon.Shoot(_shootPoint.position,);
+        if (_iSee && _itHaveGun == true && weapon._canShoot)
+        {
+            Vector2 lookDir = new Vector2(_player.position.x, _player.position.y) - new Vector2(transform.position.x, transform.position.y);
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+            var rotationToPlayer = Quaternion.AngleAxis(angle, Vector3.forward);
+            weapon.transform.rotation = rotationToPlayer;
+            if (_itHaveShotGun)
+                StartCoroutine(weapon.ShotgunShoot(_shootPoint.position, rotationToPlayer));
+            else
+                StartCoroutine(weapon.Shoot(_shootPoint.position, rotationToPlayer));
+        }
     }
 
     public void Die(Transform positionOfBullet)
@@ -56,11 +57,7 @@ public class EnemyAI : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = _dieSprite;
         GetComponent<Rigidbody2D>().AddForce(positionOfBullet.position,ForceMode2D.Force);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<EnemyAI>());
-    }
-    public void Shoot()
-    {
-        
     }
 }

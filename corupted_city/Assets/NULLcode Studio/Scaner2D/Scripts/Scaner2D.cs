@@ -64,7 +64,7 @@ public class Scaner2D : MonoBehaviour {
 		return false;
 	}
 
-	bool Scan() 
+	public bool Scan() 
 	{
 		bool hit = false;
 		float j = 0;

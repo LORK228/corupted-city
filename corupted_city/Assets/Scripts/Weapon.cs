@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
     public Vector2 PickUpOffSet; //изменение координат при поднятии оружия, (выше/ниже и т.д) 
     private Vector2 _mousePos;
     private Transform _shootPoint;
-    private bool _canShoot;
+    public bool _canShoot;
     private bool inMovement => GetComponentInParent<Movement>() != null;
     ShotGun shotgun => GetComponent<ShotGun>();
 
