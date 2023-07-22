@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _waintSecondsShoot;
     [SerializeField] public float flyDist;
 
+    [SerializeField] public int CountOfBullet;
+    [SerializeField] public Text textOFbullets;
+
+    int maxBullet;
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
     public bool Flying;
@@ -26,6 +31,8 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        textOFbullets.text = $"";
+        maxBullet = CountOfBullet;
         _canShoot = true;
         _shootPoint = GetComponentInChildren<ShootPoint>().transform;
         if(shotgun != null)
@@ -38,16 +45,20 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if(inMovement)
+        
+        if(inMovement && CountOfBullet >= 0)
         {
             _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 lookDir = _mousePos - new Vector2(transform.position.x, transform.position.y);
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
             var rotationToMouse = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = rotationToMouse;
-            if (Input.GetMouseButton(0) && _canShoot)
+            if (CountOfBullet <= 0)
+                textOFbullets.text = $"out of ammo";
+            
+            else if (Input.GetMouseButton(0) && _canShoot)
             {
-                if(shotgun != null)
+                if (shotgun != null)
                     StartCoroutine(ShotgunShoot(_shootPoint.position, rotationToMouse));
                 else
                     StartCoroutine(Shoot(_shootPoint.position, rotationToMouse));
@@ -70,6 +81,8 @@ public class Weapon : MonoBehaviour
     public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation,bool isAi = false)
     {
         var bullet = Instantiate(_bullet, pointToShoot, rotation);
+        CountOfBullet -= 1;
+        textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
         bullet.GetComponent<Bullet>().Ai = isAi;
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
@@ -84,6 +97,8 @@ public class Weapon : MonoBehaviour
             rotate = rotateIznach;
             rotate.z += UnityEngine.Random.Range(_minAndMaxRotateShootGun.x, _minAndMaxRotateShootGun.y);
             var bullet =  Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
+            CountOfBullet -= 1;
+            textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
             bullet.GetComponent<Bullet>().Ai = isAi;
         }
         _canShoot = false;
@@ -92,6 +107,7 @@ public class Weapon : MonoBehaviour
     }
     public void Throw()
     {
+        textOFbullets.text = $"";
         startPoint = new Vector2(transform.position.x, transform.position.y);
         startRotation = transform.right;
         Flying = true;
