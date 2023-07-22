@@ -63,6 +63,9 @@ public class HotBar : MonoBehaviour
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item=OnPickPrior;
                     OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
                     OnPickUpItems.Remove(OnPickPrior);
+                    OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
+                    var weapon = OnPickPrior.GetComponent<Weapon>();
+                    weapon.textOFbullets.text = $"{weapon.CountOfBullet}/{weapon.maxBullet}";
                 }
             }
         }

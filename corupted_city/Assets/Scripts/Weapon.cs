@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] public int CountOfBullet;
     [SerializeField] public Text textOFbullets;
 
-    int maxBullet;
+    public int maxBullet;
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
     public bool Flying;
