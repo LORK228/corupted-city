@@ -11,7 +11,10 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null)
+        if (collision.GetComponent<EnemyAI>() != null)
+            collision.GetComponent<EnemyAI>().Die(transform);
+
+        if (collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 3)
         Destroy(gameObject);
     }
 }
