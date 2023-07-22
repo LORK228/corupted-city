@@ -42,17 +42,18 @@ public class HotBar : MonoBehaviour
             //активировать меню 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item!=null)
                 {
                     //положить оружие
                 }
                 else
                 {
-                    
                     OnPickPrior.transform.parent = PlayerTrfm;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item=OnPickPrior;
                     OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
+                    OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
                 }
             }
         }

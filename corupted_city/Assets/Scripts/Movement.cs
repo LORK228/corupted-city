@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
-    [SerializeField] private Transform[] _hands;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     [SerializeField] private HotBar HotBar;
@@ -27,17 +26,6 @@ public class Movement : MonoBehaviour
         }
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
-        if(GetComponentInChildren<Weapon>() != null)
-        {
-            var Points = GetComponentInChildren<Weapon>().countOfPoints;
-            _hands[0].position = Points[0].position;
-            _hands[1].position = Points[1].position;
-        }
-        else
-        {
-            _hands[0].localPosition = new Vector3(-1.52f, -5.48f, 0);
-            _hands[1].localPosition = new Vector3(1.62f, -5.48f, 0);
-        }
         if (Input.GetMouseButton(1))
         {
           
@@ -53,6 +41,9 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
