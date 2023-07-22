@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject _bullet;
     [SerializeField] private float _waintSecondsShoot;
     [SerializeField] public float flyDist;
-
+    [SerializeField] public int Number;
     [SerializeField] public int CountOfBullet;
     [SerializeField] public Text textOFbullets;
 
@@ -80,6 +80,7 @@ public class Weapon : MonoBehaviour
 
     public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation,bool isAi = false)
     {
+        player.SetTrigger("Shooting");
         var bullet = Instantiate(_bullet, pointToShoot, rotation);
         CountOfBullet -= 1;
         textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
@@ -90,6 +91,7 @@ public class Weapon : MonoBehaviour
     }
     public IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation, bool isAi = false)
     {
+        player.SetTrigger("Shooting");
         var rotate = rotation.eulerAngles;
         var rotateIznach = rotate;
         for (int i = 0; i < _shotgunAmmunition; i++)

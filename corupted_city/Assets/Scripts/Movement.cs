@@ -44,6 +44,14 @@ public class Movement : MonoBehaviour
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if (_rb.IsSleeping())
+        {
+            GetComponent<Animator>().SetBool("Moving", false);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Moving", true);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

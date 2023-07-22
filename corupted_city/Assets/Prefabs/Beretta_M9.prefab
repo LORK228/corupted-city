@@ -125,8 +125,10 @@ MonoBehaviour:
   _bullet: {fileID: 5683416792769245958, guid: 3f49192eec88eba4cb723305a364bf28, type: 3}
   _waintSecondsShoot: 0.5
   flyDist: 10
+  Number: 1
   CountOfBullet: 100
   textOFbullets: {fileID: 0}
+  maxBullet: 0
   Flying: 0
   player: {fileID: 0}
   flySpeed: 10

@@ -14,6 +14,7 @@ public class HotBar : MonoBehaviour
 
     [SerializeField] private Sprite Active;
     [SerializeField] private Sprite NonActive;
+    [SerializeField] private Animator player;
     [SerializeField] public List<GameObject> Slots;
     [SerializeField] public List<GameObject> ItemSlots;
     [HideInInspector] public List<GameObject> OnPickUpItems;
@@ -128,7 +129,16 @@ public class HotBar : MonoBehaviour
             Slots[i].GetComponent<SpriteRenderer>().sprite = NonActive;
         }
         Slots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = Active;
+        if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item == null)
+        {
+            player.SetInteger("Weapon", 0);
+        }
+        else
+        {
+            player.SetInteger("Weapon", Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.GetComponent<Weapon>().Number);
+        }    
     }
+
 
 
 
