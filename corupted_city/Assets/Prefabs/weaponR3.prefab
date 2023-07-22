@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7289408019101659141}
   - component: {fileID: 5649047186799596756}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4638706109492686900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3, y: -4.37, z: 0}
+  m_LocalPosition: {x: 8.1, y: -4.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5486967660887076021}
@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 8244219887439827792}
   - component: {fileID: 5833777031925554564}
   - component: {fileID: -2725732418519639118}
+  - component: {fileID: 1646520866}
   m_Layer: 0
   m_Name: weaponR3
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 6418544795481131537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0}
   m_Children:
   - {fileID: 6744246703580305833}
   - {fileID: 5831445204797806088}
@@ -158,6 +159,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 5683416792769245958, guid: 3f49192eec88eba4cb723305a364bf28, type: 3}
   _waintSecondsShoot: 0.5
+  flyDist: 50
+--- !u!61 &1646520866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418544795481131537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: -4.8}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.96, y: 7.5}
+  m_EdgeRadius: 0
 --- !u!1 &6863238513626761423
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5831445204797806088}
   - component: {fileID: 5782763086300441620}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6744246703580305833}
   - component: {fileID: 927224489727285971}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
