@@ -8,7 +8,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Transform _player;
 
     [SerializeField] private Sprite _dieSprite;
-    
+    [SerializeField] private float _distanceToChase;
+
     private bool _itHaveGun => GetComponentInChildren<Weapon>() != null;
     private bool _itHaveShotGun => GetComponentInChildren<ShotGun>() != null;
     private NavMeshAgent _agent;
@@ -34,8 +35,8 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        _iSee = _scanner.Scan();
-        if (_scanner.Scan())
+        _iSee = Vector3.Distance(transform.position, _player.position) < _distanceToChase;
+        if (Vector3.Distance(transform.position, _player.position) < _distanceToChase)
             _iSeeFirstTime = true;
         if((_iSeeFirstTime && _itHaveGun == false) || (_itHaveGun == true && _iSee == false && _iSeeFirstTime == true))
             _agent.SetDestination(_player.position);
@@ -46,9 +47,9 @@ public class EnemyAI : MonoBehaviour
             var rotationToPlayer = Quaternion.AngleAxis(angle, Vector3.forward);
             weapon.transform.rotation = rotationToPlayer;
             if (_itHaveShotGun)
-                StartCoroutine(weapon.ShotgunShoot(_shootPoint.position, rotationToPlayer));
+                StartCoroutine(weapon.ShotgunShoot(_shootPoint.position, rotationToPlayer,true));
             else
-                StartCoroutine(weapon.Shoot(_shootPoint.position, rotationToPlayer));
+                StartCoroutine(weapon.Shoot(_shootPoint.position, rotationToPlayer, true));
         }
     }
 
@@ -58,6 +59,7 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(positionOfBullet.position,ForceMode2D.Force);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         Destroy(GetComponent<BoxCollider2D>());
+        Destroy(GetComponent<Rigidbody2D>());
         Destroy(GetComponent<EnemyAI>());
     }
 }

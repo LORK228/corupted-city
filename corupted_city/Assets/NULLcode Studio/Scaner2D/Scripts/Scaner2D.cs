@@ -12,9 +12,9 @@ public class Scaner2D : MonoBehaviour {
 
 	[SerializeField] private LayerMask targetMask; // маски целей
 	[SerializeField] private LayerMask ignoreMask; // маски, которые нужно игнорировать (например, маска данного персонажа)
-	[SerializeField] [Range(1, 6)] private int rays = 3; // число лучей по формуле (N * 2) - 1, где N - данная переменная
+	[SerializeField]  private int rays = 360; // число лучей по формуле (N * 2) - 1, где N - данная переменная
 	[SerializeField] [Range(1, 30)] private float distance = 5; // длинна луча
-	[SerializeField] [Range(0, 90)] private float angle = 20; // угол между лучами
+	[SerializeField] [Range(0, 90)] private float angle = 10; // угол между лучами
 	[SerializeField] private Transform rayPoint; // объект, из которого выпускаются лучи
 	private int invert = 1;
 

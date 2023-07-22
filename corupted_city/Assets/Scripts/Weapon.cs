@@ -67,14 +67,15 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation)
+    public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation,bool isAi = false)
     {
-        Instantiate(_bullet, pointToShoot, rotation);
+        var bullet = Instantiate(_bullet, pointToShoot, rotation);
+        bullet.GetComponent<Bullet>().Ai = isAi;
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
         _canShoot = true;
     }
-    public IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation)
+    public IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation, bool isAi = false)
     {
         var rotate = rotation.eulerAngles;
         var rotateIznach = rotate;
@@ -82,7 +83,8 @@ public class Weapon : MonoBehaviour
         {
             rotate = rotateIznach;
             rotate.z += UnityEngine.Random.Range(_minAndMaxRotateShootGun.x, _minAndMaxRotateShootGun.y);
-            Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
+            var bullet =  Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
+            bullet.GetComponent<Bullet>().Ai = isAi;
         }
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
