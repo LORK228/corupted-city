@@ -9,11 +9,13 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] private Sprite _dieSprite;
     [SerializeField] private float _distanceToChase;
+    [SerializeField] private float _distanceToDamage;
+    [SerializeField] private float _secondBetweenBeats;
 
     private bool _itHaveGun => GetComponentInChildren<Weapon>() != null;
     private bool _itHaveShotGun => GetComponentInChildren<ShotGun>() != null;
     private NavMeshAgent _agent;
-    private Scaner2D _scanner;
+    private bool canBeat;
     private bool _iSeeFirstTime;
     private bool _iSee;
     private Weapon weapon;
@@ -22,7 +24,6 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _scanner = GetComponent<Scaner2D>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
         _iSee = false;
@@ -31,6 +32,7 @@ public class EnemyAI : MonoBehaviour
             _shootPoint = GetComponentInChildren<ShootPoint>().transform;
             weapon = GetComponentInChildren<Weapon>();
         }
+        canBeat = true;
     }
 
     void Update()
@@ -39,7 +41,14 @@ public class EnemyAI : MonoBehaviour
         if (Vector3.Distance(transform.position, _player.position) < _distanceToChase)
             _iSeeFirstTime = true;
         if((_iSeeFirstTime && _itHaveGun == false) || (_itHaveGun == true && _iSee == false && _iSeeFirstTime == true))
+        {
             _agent.SetDestination(_player.position);
+            if( _itHaveGun == false && Vector3.Distance(transform.position, _player.position) < _distanceToDamage && canBeat)
+            {
+                StartCoroutine(Punch());
+            }
+        }
+           
         if (_iSee && _itHaveGun == true && weapon._canShoot)
         {
             Vector2 lookDir = new Vector2(_player.position.x, _player.position.y) - new Vector2(transform.position.x, transform.position.y);
@@ -53,12 +62,21 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private IEnumerator Punch()
+    {
+        _player.GetComponentInChildren<health>().healthCount -= 1;
+        canBeat = false;
+        yield return new WaitForSeconds(_secondBetweenBeats);
+        canBeat = true;
+    }
+
     public void Die(Transform positionOfBullet)
     {
         GetComponent<SpriteRenderer>().sprite = _dieSprite;
         GetComponent<Rigidbody2D>().AddForce(positionOfBullet.position,ForceMode2D.Force);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-        GetComponentInChildren<Weapon>().Throw();
+        if(_itHaveGun)
+            GetComponentInChildren<Weapon>().Throw();
         print(1);
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<Rigidbody2D>());

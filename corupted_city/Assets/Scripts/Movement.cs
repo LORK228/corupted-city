@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -9,14 +10,21 @@ public class Movement : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 _movement;
     [SerializeField] private HotBar HotBar;
+    public int health = 3;
+    private health healthPlayer;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        healthPlayer = GetComponentInChildren<health>();
     }
 
     void Update()
     {
+        if(healthPlayer.healthCount <= 0)
+        {
+            Dead();
+        }
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
         if(GetComponentInChildren<Weapon>() != null)
@@ -66,5 +74,10 @@ public class Movement : MonoBehaviour
              HotBar.OnPickUpItems.Remove(other.gameObject);
            }  
         }
+    }
+
+    private void Dead()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

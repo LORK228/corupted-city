@@ -20,6 +20,10 @@ public class Bullet : MonoBehaviour
 
         if (Ai && collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 6)
         {
+            if(collision.gameObject.layer == 3)
+            {
+                collision.GetComponentInChildren<health>().healthCount -= 1;
+            }
             Destroy(gameObject);
         }
     }
