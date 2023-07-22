@@ -58,8 +58,11 @@ public class EnemyAI : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = _dieSprite;
         GetComponent<Rigidbody2D>().AddForce(positionOfBullet.position,ForceMode2D.Force);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        GetComponentInChildren<Weapon>().Throw();
+        print(1);
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<Rigidbody2D>());
+        print(1);
         Destroy(GetComponent<EnemyAI>());
     }
 }

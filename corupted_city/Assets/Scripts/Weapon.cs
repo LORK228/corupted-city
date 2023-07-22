@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
 
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
-    private bool Flying;
+    public bool Flying;
     private Vector2 startPoint;
     private Vector3 startRotation;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
