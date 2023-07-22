@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public bool Flying;
     private Vector2 startPoint;
     private Vector3 startRotation;
+    public Animator player;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
     public int flySpeed;
     public int rotationDegree;

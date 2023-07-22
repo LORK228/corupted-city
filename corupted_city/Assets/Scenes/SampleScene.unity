@@ -883,30 +883,12 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!1 &445613693 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1790377275980126214, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
-  m_PrefabInstance: {fileID: 1790377276139216507}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &445613694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445613693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc8991be230ebf46822a7f0d339200b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthCount: 3
 --- !u!114 &445613695 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1790377275980126212, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
   m_PrefabInstance: {fileID: 1790377276139216507}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445613693}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -994,6 +976,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &549881060 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4710655231721146185, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
+  m_PrefabInstance: {fileID: 1790377276139216507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655522722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2725732418519639118, guid: 9bb486960d5162f44abea25f7d6db5f9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 549881060}
     - target: {fileID: -2725732418519639118, guid: 9bb486960d5162f44abea25f7d6db5f9, type: 3}
       propertyPath: flyDist
       value: 10
@@ -1679,15 +1670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab67b155d249a41bd4f45551843870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMask:
-    m_Bits: 8
-  ignoreMask:
-    m_Bits: 0
-  rays: 3
-  distance: 5
-  angle: 20
-  rayPoint: {fileID: 1951432968}
-  invert: 1
 --- !u!4 &1485848935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1790377277086097180, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
@@ -2164,6 +2146,5 @@ PrefabInstance:
       propertyPath: Crosshair
       value: 
       objectReference: {fileID: 495958245}
-    m_RemovedComponents:
-    - {fileID: 936442339, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af09cefb23690442a2ca6662b0c8eeb, type: 3}
