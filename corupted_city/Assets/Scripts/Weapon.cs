@@ -51,14 +51,14 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation)
+    public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation)
     {
         Instantiate(_bullet, pointToShoot, rotation);
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
         _canShoot = true;
     }
-    private IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation)
+    public IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation)
     {
         var rotate = rotation.eulerAngles;
         var rotateIznach = rotate;
