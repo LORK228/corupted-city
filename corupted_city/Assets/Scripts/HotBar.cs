@@ -15,6 +15,7 @@ public class HotBar : MonoBehaviour
     [SerializeField] private Sprite Active;
     [SerializeField] private Sprite NonActive;
     [SerializeField] public List<GameObject> Slots;
+    [SerializeField] public List<GameObject> ItemSlots;
     [HideInInspector] public List<GameObject> OnPickUpItems;
 
     void Start()
@@ -38,13 +39,21 @@ public class HotBar : MonoBehaviour
                     MinOnPick = Vector2.Distance(OnPickUpItems[i].transform.position, PlayerTrfm.position);
                 }
             }
-            print(OnPickPrior.name);
+            
             //активировать меню 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item!=null)
                 {
-                    //положить оружие
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.transform.parent = null;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.GetComponent<Weapon>().textOFbullets.text = $"";
+                    ItemSlots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = null;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item= null;
+                    OnPickPrior.transform.parent = PlayerTrfm;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item = OnPickPrior;
+                    OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
+                    OnPickUpItems.Remove(OnPickPrior);
                 }
                 else
                 {
@@ -53,12 +62,28 @@ public class HotBar : MonoBehaviour
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item=OnPickPrior;
                     OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
+                    OnPickUpItems.Remove(OnPickPrior);
                 }
             }
         }
         else
         {
             OnPickPrior = null;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            if (ItemSlots[i].GetComponent<ItemSlot>().item != null)
+            {
+
+                if (ActiveSlot != i)
+                {
+                    ItemSlots[i].GetComponent<ItemSlot>().item.gameObject.SetActive(false);
+                }
+                else
+                {
+                    ItemSlots[i].GetComponent<ItemSlot>().item.gameObject.SetActive(true);
+                }
+            }
         }
         // Изменение активного слота колесом мыши
         if (mw > 0.1)

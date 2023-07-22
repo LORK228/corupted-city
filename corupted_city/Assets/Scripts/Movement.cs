@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Transform[] _hands;
+    [SerializeField] private Transform Crosshair;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     [SerializeField] private HotBar HotBar;
@@ -21,7 +22,15 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if(healthPlayer.healthCount <= 0)
+        if (Crosshair.position.x <= transform.position.x)
+        {
+            transform.eulerAngles = new Vector3(transform.rotation.x * 180f, 180f, transform.rotation.z * 180f);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(transform.rotation.x * 180f, 0f, transform.rotation.z * 180f);
+        }
+        if (healthPlayer.healthCount <= 0)
         {
             Dead();
         }
@@ -57,7 +66,7 @@ public class Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.gameObject.GetComponent<Weapon>() != null)
+        if (other.gameObject.GetComponent<Weapon>() != null && other.gameObject.transform.parent == null)
         {
                 if (HotBar.OnPickUpItems.Find(x => x == other.gameObject)==null)
                 {
@@ -67,7 +76,7 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Weapon>() != null)
+        if (other.gameObject.GetComponent<Weapon>() != null && other.gameObject.transform.parent==null)
         {
          if (HotBar.OnPickUpItems.Find(x => x == other.gameObject) != null)
           {
