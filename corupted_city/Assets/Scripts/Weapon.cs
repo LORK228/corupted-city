@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
     public int rotationDegree;
     public Vector2 PickUpOffSet; //изменение координат при поднятии оружия, (выше/ниже и т.д) 
     private Vector2 _mousePos;
-    private Transform _shootPoint;
+    [SerializeField] public Transform _shootPoint;
     public bool _canShoot;
     private bool inMovement => GetComponentInParent<Movement>() != null;
     ShotGun shotgun => GetComponent<ShotGun>();
@@ -34,7 +34,6 @@ public class Weapon : MonoBehaviour
         textOFbullets.text = $"";
         maxBullet = CountOfBullet;
         _canShoot = true;
-        _shootPoint = GetComponentInChildren<ShootPoint>().transform;
         if(shotgun != null)
         {
             var shotgun = GetComponent<ShotGun>();
@@ -47,12 +46,12 @@ public class Weapon : MonoBehaviour
     {
         
         if(inMovement && CountOfBullet >= 0)
-        {
+        { 
+            _shootPoint.localPosition = new Vector3(1.51999998f, -0.51f, 0);
             _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 lookDir = _mousePos - new Vector2(transform.position.x, transform.position.y);
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
             var rotationToMouse = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = rotationToMouse;
             if (CountOfBullet <= 0)
                 textOFbullets.text = $"out of ammo";
             
@@ -107,9 +106,10 @@ public class Weapon : MonoBehaviour
     }
     public void Throw()
     {
+        GetComponent<SpriteRenderer>().enabled = true;
         textOFbullets.text = $"";
         startPoint = new Vector2(transform.position.x, transform.position.y);
-        startRotation = transform.right;
+        startRotation = GetComponentInParent<Movement>().transform.right;
         Flying = true;
         transform.parent = null;
         
