@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetMouseButton(1))
         {
-            print(1);
+          
             if (HotBar.Slots[HotBar.ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite != null)
             {
                 HotBar.Slots[HotBar.ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.GetComponent<Weapon>().Throw();
