@@ -61,16 +61,6 @@ public class EnemyAI : MonoBehaviour
     }
     public void Shoot()
     {
-        Vector2 lookDir = new Vector2(_player.position.x, _player.position.y) - new Vector2(transform.position.x, transform.position.y);
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        var rotationToPlayer = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = rotationToPlayer;
-        if (Input.GetMouseButton(0) && _canShoot)
-        {
-            if (shotgun != null)
-                StartCoroutine(ShotgunShoot(_shootPoint.position, rotationToMouse));
-            else
-                StartCoroutine(Shoot(_shootPoint.position, rotationToMouse));
-        }
+        
     }
 }
