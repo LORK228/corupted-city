@@ -46,27 +46,31 @@ public class HotBar : MonoBehaviour
             {
                 if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item!=null)
                 {
-                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.transform.parent = null;
-                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.GetComponent<Weapon>().textOFbullets.text = $"";
+                    OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.GetComponent<SpriteRenderer>().enabled = true;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.transform.parent = null;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.GetComponent<Weapon>().textOFbullets.text = $"";
                     ItemSlots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = null;
-                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item= null;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item= null;
                     OnPickPrior.transform.parent = PlayerTrfm;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
-                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item = OnPickPrior;
-                    OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item = OnPickPrior;
                     OnPickUpItems.Remove(OnPickPrior);
+                    ItemSlots[ActiveSlot].transform.localScale = new Vector3(OnPickPrior.GetComponent<Weapon>().SlotSize, OnPickPrior.GetComponent<Weapon>().SlotSize, 1f);
+                    ItemSlots[ActiveSlot].transform.localPosition = OnPickPrior.GetComponent<Weapon>().SlotCord;
                 }
                 else
                 {
-                    
                     OnPickPrior.transform.parent = PlayerTrfm;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
-                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item=OnPickPrior;
-                    OnPickPrior.transform.localPosition = OnPickPrior.GetComponent<Weapon>().PickUpOffSet;
+                    Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item=OnPickPrior;
                     OnPickUpItems.Remove(OnPickPrior);
                     OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
                     var weapon = OnPickPrior.GetComponent<Weapon>();
                     weapon.textOFbullets.text = $"{weapon.CountOfBullet}/{weapon.maxBullet}";
+                    ItemSlots[ActiveSlot].transform.localScale = new Vector3(OnPickPrior.GetComponent<Weapon>().SlotSize, OnPickPrior.GetComponent<Weapon>().SlotSize, 1f);
+                    ItemSlots[ActiveSlot].transform.localPosition = OnPickPrior.GetComponent<Weapon>().SlotCord;
+                    print(OnPickPrior.GetComponent<Weapon>().SlotCord);
                 }
             }
         }

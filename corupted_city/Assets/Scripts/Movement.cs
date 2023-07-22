@@ -46,11 +46,11 @@ public class Movement : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         if (_rb.IsSleeping())
         {
-            GetComponent<Animator>().SetBool("Moving", false);
+            GetComponent<Animator>().SetBool("Mooving", false);
         }
         else
         {
-            GetComponent<Animator>().SetBool("Moving", true);
+            GetComponent<Animator>().SetBool("Mooving", true);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

@@ -123,16 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 5683416792769245958, guid: 3f49192eec88eba4cb723305a364bf28, type: 3}
-  _waintSecondsShoot: 0.5
+  _waintSecondsShoot: 0.2
   flyDist: 10
   Number: 2
   CountOfBullet: 100
   textOFbullets: {fileID: 0}
+  SlotSize: 1.35
+  SlotCord: {x: 0, y: 0}
   maxBullet: 0
   Flying: 0
-  player: {fileID: 0}
   flySpeed: 10
   rotationDegree: 10
-  PickUpOffSet: {x: 0, y: 0}
   _shootPoint: {fileID: 0}
   _canShoot: 0

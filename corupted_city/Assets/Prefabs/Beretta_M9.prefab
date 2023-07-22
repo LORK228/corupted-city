@@ -99,9 +99,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.16}
+    border: {x: 0.05, y: 0, z: 0.15, w: 0.025}
+    pivot: {x: 0.4527778, y: 0.46388885}
+    oldSize: {x: 0.8, y: 0.4}
     newSize: {x: 0.32, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -128,11 +128,11 @@ MonoBehaviour:
   Number: 1
   CountOfBullet: 100
   textOFbullets: {fileID: 0}
+  SlotSize: 3
+  SlotCord: {x: 0.018, y: 0}
   maxBullet: 0
   Flying: 0
-  player: {fileID: 0}
   flySpeed: 10
   rotationDegree: 10
-  PickUpOffSet: {x: 0, y: 0}
   _shootPoint: {fileID: 0}
   _canShoot: 0

@@ -11,27 +11,31 @@ public class Weapon : MonoBehaviour
     [SerializeField] public float flyDist;
     [SerializeField] public int Number;
     [SerializeField] public int CountOfBullet;
-    [SerializeField] public Text textOFbullets;
-
+    [HideInInspector] public Text textOFbullets;
+    public float SlotSize;
+    public Vector2 SlotCord;
+    private HotBar hotBar;
     public int maxBullet;
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
-    public bool Flying;
+    [HideInInspector] public bool Flying;
     private Vector2 startPoint;
     private Vector3 startRotation;
-    public Animator player;
+    private Animator player;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
     public int flySpeed;
     public int rotationDegree;
-    public Vector2 PickUpOffSet; //изменение координат при поднятии оружия, (выше/ниже и т.д) 
     private Vector2 _mousePos;
-    [SerializeField] public Transform _shootPoint;
+    [HideInInspector] public Transform _shootPoint;
     public bool _canShoot;
     private bool inMovement => GetComponentInParent<Movement>() != null;
     ShotGun shotgun => GetComponent<ShotGun>();
 
     private void Start()
     {
+        hotBar = GameObject.Find("Inventory").GetComponent<HotBar>();
+        textOFbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
+        player = GameObject.Find("Character").GetComponent<Animator>();
         textOFbullets.text = $"";
         maxBullet = CountOfBullet;
         _canShoot = true;
@@ -115,7 +119,8 @@ public class Weapon : MonoBehaviour
         startRotation = GetComponentInParent<Movement>().transform.right;
         Flying = true;
         transform.parent = null;
-        
+        hotBar.ItemSlots[hotBar.ActiveSlot].transform.localScale = new Vector3(1f,1f, 1f);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
