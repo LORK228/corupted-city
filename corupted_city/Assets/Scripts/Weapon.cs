@@ -13,7 +13,11 @@ public class Weapon : MonoBehaviour
     private Vector2 _minAndMaxRotateShootGun;
     private bool Flying;
     private Vector2 startPoint;
+    private Vector3 startRotation;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
+    public int flySpeed;
+    public int rotationDegree;
+    public Vector2 PickUpOffSet; //изменение координат при поднятии оружия, (выше/ниже и т.д) 
     private Vector2 _mousePos;
     private Transform _shootPoint;
     private bool _canShoot;
@@ -50,6 +54,18 @@ public class Weapon : MonoBehaviour
             }
         }
     }
+    private void FixedUpdate()
+    {
+        if (Flying&&Vector2.Distance(startPoint,transform.position)<flyDist)
+        {
+            transform.position += startRotation * Time.deltaTime*flySpeed;
+            transform.Rotate(0f, 0f, rotationDegree);
+        }
+        else
+        {
+            Flying = false;
+        }
+    }
 
     private IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation)
     {
@@ -74,13 +90,20 @@ public class Weapon : MonoBehaviour
     }
     public void Throw()
     {
-        startPoint = transform.position;
-
-        gameObject.transform.parent = null;
-        while (Vector2.Distance(startPoint, transform.position) < flyDist) 
+        startPoint = new Vector2(transform.position.x, transform.position.y);
+        startRotation = transform.right;
+        Flying = true;
+        transform.parent = null;
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+      if (Flying)
         {
-            print(1);
-            transform.position += transform.forward*2;
-        }
+            if (collision.gameObject.GetComponent<Weapon>())
+            {
+
+            }
+        }   
     }
 }
