@@ -80,7 +80,7 @@ public class Weapon : MonoBehaviour
         while (Vector2.Distance(startPoint, transform.position) < flyDist) 
         {
             print(1);
-            transform.position = new Vector2(transform.position.x, transform.position.y + 1);
+            transform.position += transform.forward*2;
         }
     }
 }
