@@ -13,6 +13,7 @@ public class exit : MonoBehaviour
     [SerializeField] private GameObject inventar;
     [SerializeField] private GameObject health;
     [SerializeField] private SpriteRenderer playersprite;
+    [SerializeField] private AudioSource audio;
     private bool isIn;
     private void Start()
     {
@@ -21,6 +22,7 @@ public class exit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isIn = true;
+        Destroy(audio);
         Destroy(health);
         Destroy(playersprite);
         Destroy(inventar);
