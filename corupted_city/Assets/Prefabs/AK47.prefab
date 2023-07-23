@@ -126,13 +126,13 @@ MonoBehaviour:
   _waintSecondsShoot: 0.2
   flyDist: 10
   Number: 2
-  CountOfBullet: 100
+  CountOfBullet: 25
   textOFbullets: {fileID: 0}
   SlotSize: 1.35
   SlotCord: {x: 0, y: 0}
   maxBullet: 0
   Flying: 0
   flySpeed: 10
-  rotationDegree: 10
+  rotationDegree: 20
   _shootPoint: {fileID: 0}
   _canShoot: 0

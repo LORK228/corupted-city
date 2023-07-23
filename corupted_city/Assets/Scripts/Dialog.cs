@@ -33,6 +33,7 @@ public class Dialog : MonoBehaviour
             }
             else
             {
+                dialog.SetActive(true);
                 text.text = "";
                 StartDialogue();
                 isDialog = true;
@@ -45,7 +46,7 @@ public class Dialog : MonoBehaviour
         if(collision.tag == "Player")
         {
             isIn = true;
-            dialog.SetActive(true);
+            
             text.text = "Press E";
         }
     }

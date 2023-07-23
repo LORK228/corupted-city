@@ -97,13 +97,13 @@ public class Weapon : MonoBehaviour
     {
         player.SetTrigger("Shooting");
         var rotate = rotation.eulerAngles;
+        CountOfBullet -= 1;
         var rotateIznach = rotate;
         for (int i = 0; i < _shotgunAmmunition; i++)
         {
             rotate = rotateIznach;
             rotate.z += UnityEngine.Random.Range(_minAndMaxRotateShootGun.x, _minAndMaxRotateShootGun.y);
             var bullet =  Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
-            CountOfBullet -= 1;
             textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
             bullet.GetComponent<Bullet>().Ai = isAi;
         }

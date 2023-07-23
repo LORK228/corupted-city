@@ -127,7 +127,7 @@ MonoBehaviour:
   _waintSecondsShoot: 0.5
   flyDist: 10
   Number: 3
-  CountOfBullet: 100
+  CountOfBullet: 8
   textOFbullets: {fileID: 0}
   SlotSize: 1.3
   SlotCord: {x: -0.031, y: 0}

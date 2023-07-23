@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f06321eecf804fb46bd125e2d56d8c4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 371a63e418568f24b8c807aabf080be3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,9 +99,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.05, y: 0, z: 0.15, w: 0.025}
-    pivot: {x: 0.4527778, y: 0.46388885}
-    oldSize: {x: 0.8, y: 0.4}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.356}
     newSize: {x: 0.32, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,13 +126,13 @@ MonoBehaviour:
   _waintSecondsShoot: 0.5
   flyDist: 10
   Number: 1
-  CountOfBullet: 100
+  CountOfBullet: 7
   textOFbullets: {fileID: 0}
   SlotSize: 3
   SlotCord: {x: 0.018, y: 0}
   maxBullet: 0
   Flying: 0
   flySpeed: 10
-  rotationDegree: 10
+  rotationDegree: 20
   _shootPoint: {fileID: 0}
   _canShoot: 0

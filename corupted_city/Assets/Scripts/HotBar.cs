@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
+using UnityEngine.UI;
 public class HotBar : MonoBehaviour
 {
     public int ActiveSlot;
@@ -18,12 +19,12 @@ public class HotBar : MonoBehaviour
     [SerializeField] public List<GameObject> Slots;
     [SerializeField] public List<GameObject> ItemSlots;
     [HideInInspector] public List<GameObject> OnPickUpItems;
-
+    [HideInInspector] private Text textofbullets;
     void Start()
     {
         OnPickUpItems = new List<GameObject>();
         ActiveSlot = 0;
-        
+        textofbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
     }
 
     void Update()
@@ -133,13 +134,24 @@ public class HotBar : MonoBehaviour
             Slots[i].GetComponent<SpriteRenderer>().sprite = NonActive;
         }
         Slots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = Active;
-        if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item == null)
+        
+        if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item == null)
         {
+            textofbullets.text = $"";
             player.SetInteger("Weapon", 0);
         }
         else
         {
-            player.SetInteger("Weapon", Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item.GetComponent<Weapon>().Number);
+            Weapon weapon = Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.GetComponent<Weapon>();
+            player.SetInteger("Weapon", weapon.Number);
+            if (weapon.CountOfBullet <= 0)
+            {
+                textofbullets.text = $"out of ammo";
+            }
+            else
+            {
+                textofbullets.text = $"{weapon.CountOfBullet}/{weapon.maxBullet}";
+            }
         }    
     }
 
