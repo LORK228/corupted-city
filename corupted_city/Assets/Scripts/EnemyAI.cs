@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float _distanceToChase;
     [SerializeField] private float _distanceToDamage;
     [SerializeField] private float _secondBetweenBeats;
+    [SerializeField] private GameObject[] _bloodEffects;
 
     private bool _itHaveGun => GetComponentInChildren<Weapon>() != null;
     private bool _itHaveShotGun => GetComponentInChildren<ShotGun>() != null;
@@ -72,6 +73,7 @@ public class EnemyAI : MonoBehaviour
 
     public void Die(Transform positionOfBullet)
     {
+        Instantiate(_bloodEffects[new System.Random().Next(_bloodEffects.Length)], positionOfBullet.position, positionOfBullet.rotation);
         GetComponent<SpriteRenderer>().sprite = _dieSprite;
         GetComponent<Rigidbody2D>().AddForce(positionOfBullet.position,ForceMode2D.Force);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] GameObject particle;
     public bool Ai;
     void Update()
     {
@@ -16,7 +17,11 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<EnemyAI>().Die(transform);
 
         if (collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 3 && Ai == false)
-        Destroy(gameObject);
+        {
+            Instantiate(particle, transform.position, Quaternion.Euler(-transform.rotation.x, -transform.rotation.y, -transform.rotation.z));
+            Destroy(gameObject);
+        }
+        
 
         if (Ai && collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 6)
         {
