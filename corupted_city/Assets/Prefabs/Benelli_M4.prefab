@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 5683416792769245958, guid: 3f49192eec88eba4cb723305a364bf28, type: 3}
-  _waintSecondsShoot: 0.5
+  _waintSecondsShoot: 1
   flyDist: 10
   Number: 3
   CountOfBullet: 8
