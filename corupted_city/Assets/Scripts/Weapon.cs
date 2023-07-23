@@ -115,7 +115,12 @@ public class Weapon : MonoBehaviour
             rotate = rotateIznach;
             rotate.z += UnityEngine.Random.Range(_minAndMaxRotateShootGun.x, _minAndMaxRotateShootGun.y);
             var bullet =  Instantiate(_bullet, pointToShoot, Quaternion.Euler(rotate));
-            textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
+            if (!isAi)
+            {
+                CountOfBullet -= 1;
+                textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
+            }
+            
             bullet.GetComponent<Bullet>().Ai = isAi;
         }
         _canShoot = false;
@@ -145,7 +150,7 @@ public class Weapon : MonoBehaviour
     {
         if (Flying)
         {
-            if (collision.gameObject.layer==6 || collision.gameObject.layer == 7)
+            if (collision.gameObject.layer==6 || collision.gameObject.layer == 1)
             {
                 if (collision.gameObject.GetComponent<EnemyAI>())
                 {

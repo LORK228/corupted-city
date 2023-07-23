@@ -9,8 +9,13 @@ public class Dialog : MonoBehaviour
     [SerializeField] private string[] lines;
     [SerializeField] private float speedText;
     [SerializeField] private Text dialogText;
+    [SerializeField] private Text TaskText;
     [SerializeField] private GameObject dialog;
     [SerializeField] private Transform player;
+    private bool questnotdone;
+    private bool questdone;
+    [SerializeField] private string[] fOfflines;
+    [SerializeField] private string[] exitlines;
 
     private bool isIn;
     private bool isDialog;
@@ -24,10 +29,33 @@ public class Dialog : MonoBehaviour
         text.text = string.Empty;
         isIn = false;
         isDialog = false;
+        questnotdone = false;
+        questdone = false;
     }
 
     private void Update()
     {
+        if (isDialog&&isIn)
+        {
+            dialog.SetActive(true);
+        }
+        else
+        {
+            dialog.SetActive(false);
+        }
+        if (questnotdone&&!questdone)
+        {
+            lines = fOfflines;
+        }
+        if (TaskText.text == "Go to the exit")
+        {
+            questdone = true;
+        }
+        if (questdone)
+        {
+            lines = exitlines;
+        }
+        
         if (isIn)
         {
             var playerPos = player.position;
@@ -79,11 +107,14 @@ public class Dialog : MonoBehaviour
 
     private IEnumerator TypeLine()
     {
+        
         foreach (char letter in lines[_index].ToCharArray())
         {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(speedText);
-        }
+            
+                dialogText.text += letter;
+                yield return new WaitForSeconds(speedText);
+        }        
+           
     }
 
     public void ScipTextClick()
@@ -112,6 +143,8 @@ public class Dialog : MonoBehaviour
             isDialog = false;
             dialogText.text = "";
             dialog.SetActive(false);
+            questnotdone = true;
+            TaskText.text = "Find money";
         }
     }
 }

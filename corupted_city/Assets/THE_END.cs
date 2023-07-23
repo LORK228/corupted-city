@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class THE_END : MonoBehaviour
 {
     [SerializeField] private Text text;
+    [SerializeField] private Text Tasktext;
     [SerializeField] private GameObject exit;
-    
+    [SerializeField] private string[] exitDialog;
     private bool isIn;
     private bool THEEND;
 
@@ -22,10 +23,12 @@ public class THE_END : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isIn)
         {
             THEEND = true;
+            Destroy(exit);
         }
         if (THEEND)
         {
-            text.text = "go to the exit";
+            Tasktext.text = "Go to the exit";
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

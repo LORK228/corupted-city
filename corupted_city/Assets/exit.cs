@@ -14,6 +14,10 @@ public class exit : MonoBehaviour
     [SerializeField] private GameObject health;
     [SerializeField] private SpriteRenderer playersprite;
     [SerializeField] private AudioSource audio;
+    [SerializeField] private Text Tasktext;
+    [SerializeField] private Text Bullets;
+    [SerializeField] private Text Endtext;
+    public bool Infected;
     private bool isIn;
     private void Start()
     {
@@ -21,6 +25,7 @@ public class exit : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Endtext.GetComponent<ENDSUBS>().Ending = player.Corrupted;
         isIn = true;
         Destroy(audio);
         Destroy(health);
@@ -28,18 +33,21 @@ public class exit : MonoBehaviour
         Destroy(inventar);
         Destroy(end);
         Destroy(player);
-        text.text = "КОНГРАТЮЛАТИОН нажми е чтобы перезапустить" ;
+        Destroy(Tasktext);
+        Destroy(Bullets);
+        camera.cullingMask = 1<<5;
+        text.text = "" ;
+
     }
     
     private void Update()
     {
         if (isIn)
         {
-            text.text = "КОНГРАТЮЛАТИОН нажми е чтобы перезапустить";
+            text.text = "";
         }
         if (Input.GetKeyDown(KeyCode.E) && isIn)
         {
-            camera.cullingMask = 5;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

@@ -11,9 +11,10 @@ public class Movement : MonoBehaviour
     [SerializeField] private HotBar HotBar;
     public int health = 3;
     private health healthPlayer;
-
+     public bool Corrupted;
     void Start()
     {
+        Corrupted = false;
         _rb = GetComponent<Rigidbody2D>();
         healthPlayer = GetComponentInChildren<health>();
     }

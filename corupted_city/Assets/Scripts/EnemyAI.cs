@@ -78,6 +78,10 @@ public class EnemyAI : MonoBehaviour
     {
         _player.GetComponentInChildren<health>().healthCount -= 1;
         canBeat = false;
+        if (gameObject.name[0] =='Z')
+        {
+            _player.GetComponent<Movement>().Corrupted = true;
+        }
         yield return new WaitForSeconds(_secondBetweenBeats);
         canBeat = true;
     }
@@ -93,5 +97,6 @@ public class EnemyAI : MonoBehaviour
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<Rigidbody2D>());
         Destroy(GetComponent<EnemyAI>());
+        Destroy(GetComponent<PolygonCollider2D>());
     }
 }
