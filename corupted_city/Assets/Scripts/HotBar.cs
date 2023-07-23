@@ -47,6 +47,9 @@ public class HotBar : MonoBehaviour
             {
                 if (Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<ItemSlot>().item!=null)
                 {
+                    var weapon = OnPickPrior.GetComponent<Weapon>();
+                    weapon.hotBar = GameObject.Find("Inventory").GetComponent<HotBar>();
+                    weapon.textOFbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
                     OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.GetComponent<SpriteRenderer>().enabled = true;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item.transform.parent = null;
@@ -54,24 +57,43 @@ public class HotBar : MonoBehaviour
                     ItemSlots[ActiveSlot].GetComponent<SpriteRenderer>().sprite = null;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item= null;
                     OnPickPrior.transform.parent = PlayerTrfm;
+                    weapon._shootPoint = weapon.GetComponentInParent<Movement>().GetComponentInChildren<ShootPoint>().transform;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item = OnPickPrior;
                     OnPickUpItems.Remove(OnPickPrior);
                     ItemSlots[ActiveSlot].transform.localScale = new Vector3(OnPickPrior.GetComponent<Weapon>().SlotSize, OnPickPrior.GetComponent<Weapon>().SlotSize, 1f);
                     ItemSlots[ActiveSlot].transform.localPosition = OnPickPrior.GetComponent<Weapon>().SlotCord;
+                    if (weapon.CountOfBullet > 0)
+                    {
+                        weapon._canShoot = true;
+                    }
+                    
                 }
                 else
                 {
+                    var weapon = OnPickPrior.GetComponent<Weapon>();
+                    weapon.hotBar = GameObject.Find("Inventory").GetComponent<HotBar>();
+                    weapon.textOFbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
                     OnPickPrior.transform.parent = PlayerTrfm;
+                    print(weapon.GetComponentInParent<Movement>().gameObject.name);
+                    weapon._shootPoint = weapon.GetComponentInParent<Movement>().GetComponentInChildren<ShootPoint>().gameObject.transform;
+                   
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().GetComponent<SpriteRenderer>().sprite = OnPickPrior.GetComponent<SpriteRenderer>().sprite;
                     Slots[ActiveSlot].GetComponentInChildren<ItemSlot>().item=OnPickPrior;
                     OnPickUpItems.Remove(OnPickPrior);
                     OnPickPrior.GetComponent<SpriteRenderer>().enabled = false;
-                    var weapon = OnPickPrior.GetComponent<Weapon>();
+                    OnPickPrior.transform.localPosition = new Vector2(0f, 0f);
+                    OnPickPrior.transform.eulerAngles = new Vector3(0f, 0f, 0f);
                     weapon.textOFbullets.text = $"{weapon.CountOfBullet}/{weapon.maxBullet}";
                     ItemSlots[ActiveSlot].transform.localScale = new Vector3(OnPickPrior.GetComponent<Weapon>().SlotSize, OnPickPrior.GetComponent<Weapon>().SlotSize, 1f);
                     ItemSlots[ActiveSlot].transform.localPosition = OnPickPrior.GetComponent<Weapon>().SlotCord;
-                    print(OnPickPrior.GetComponent<Weapon>().SlotCord);
+                    if (weapon.CountOfBullet > 0)
+                    {
+                        weapon._canShoot = true;
+                    }
+                    
+
+
                 }
             }
         }

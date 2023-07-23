@@ -11,34 +11,40 @@ public class Weapon : MonoBehaviour
     [SerializeField] public float flyDist;
     [SerializeField] public int Number;
     [SerializeField] public int CountOfBullet;
+    [SerializeField] public Vector2 ShootPointPos;
     [HideInInspector] public Text textOFbullets;
     public float SlotSize;
     public Vector2 SlotCord;
-    private HotBar hotBar;
+    public HotBar hotBar;
     public int maxBullet;
     private int _shotgunAmmunition;
     private Vector2 _minAndMaxRotateShootGun;
     [HideInInspector] public bool Flying;
     private Vector2 startPoint;
     private Vector3 startRotation;
-    private Animator player;
+    private Animator owner;
     public Transform[] countOfPoints => GetComponentsInChildren<Point>().Select(x => x.GetComponent<Transform>()).ToArray();
     public int flySpeed;
     public int rotationDegree;
     private Vector2 _mousePos;
-    [HideInInspector] public Transform _shootPoint;
+     public Transform _shootPoint;
     public bool _canShoot;
-    private bool inMovement => GetComponentInParent<Movement>() != null;
+    public bool inMovement => GetComponentInParent<Movement>() != null;
     ShotGun shotgun => GetComponent<ShotGun>();
 
     private void Start()
     {
-        hotBar = GameObject.Find("Inventory").GetComponent<HotBar>();
-        textOFbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
-        player = GameObject.Find("Character").GetComponent<Animator>();
-        textOFbullets.text = $"";
         maxBullet = CountOfBullet;
-        _canShoot = true;
+        if (transform.parent != null)
+        {
+            _shootPoint = GetComponentInParent<EnemyAI>().GetComponentInChildren<ShootPoint>().transform;
+        }
+        else
+        {
+            textOFbullets = GameObject.Find("CountOFBullet").GetComponent<Text>();
+            textOFbullets.text = $"";    
+            _canShoot = true;
+        }
         if(shotgun != null)
         {
             var shotgun = GetComponent<ShotGun>();
@@ -52,7 +58,7 @@ public class Weapon : MonoBehaviour
         
         if(inMovement && CountOfBullet >= 0)
         { 
-            _shootPoint.localPosition = new Vector3(1.51999998f, -0.51f, 0);
+            _shootPoint.localPosition = ShootPointPos;
             _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 lookDir = _mousePos - new Vector2(transform.position.x, transform.position.y);
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
@@ -84,10 +90,14 @@ public class Weapon : MonoBehaviour
 
     public IEnumerator Shoot(Vector3 pointToShoot,Quaternion rotation,bool isAi = false)
     {
-        player.SetTrigger("Shooting");
+        if (!isAi)
+        {         
+            CountOfBullet -= 1;
+            textOFbullets.text = $"{CountOfBullet}/{maxBullet}";     
+        }
+        owner = GetComponentInParent<Animator>();
+        owner.SetTrigger("Shooting");
         var bullet = Instantiate(_bullet, pointToShoot, rotation);
-        CountOfBullet -= 1;
-        textOFbullets.text = $"{CountOfBullet}/{maxBullet}";
         bullet.GetComponent<Bullet>().Ai = isAi;
         _canShoot = false;
         yield return new WaitForSeconds(_waintSecondsShoot);
@@ -95,7 +105,8 @@ public class Weapon : MonoBehaviour
     }
     public IEnumerator ShotgunShoot(Vector3 pointToShoot, Quaternion rotation, bool isAi = false)
     {
-        player.SetTrigger("Shooting");
+        owner = GetComponentInParent<Animator>();
+        owner.SetTrigger("Shooting");
         var rotate = rotation.eulerAngles;
         CountOfBullet -= 1;
         var rotateIznach = rotate;
@@ -122,14 +133,29 @@ public class Weapon : MonoBehaviour
         hotBar.ItemSlots[hotBar.ActiveSlot].transform.localScale = new Vector3(1f,1f, 1f);
 
     }
+    public void ThrowAI()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        startPoint = new Vector2(transform.position.x, transform.position.y);
+        startRotation = GetComponentInParent<EnemyAI>().transform.right;
+        Flying = true;
+        transform.parent = null;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if (Flying)
+        if (Flying)
         {
-            if (collision.gameObject.GetComponent<Weapon>())
+            if (collision.gameObject.layer==6 || collision.gameObject.layer == 7)
             {
+                if (collision.gameObject.GetComponent<EnemyAI>())
+                {
+                    collision.GetComponent<EnemyAI>().Die(transform);
 
+                }
+
+                Flying = false;
             }
-        }   
+        }
     }
+    
 }

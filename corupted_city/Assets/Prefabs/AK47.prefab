@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8779611949875906361}
   - component: {fileID: 8779611949875906360}
   - component: {fileID: 8779611949875906363}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,12 +127,14 @@ MonoBehaviour:
   flyDist: 10
   Number: 2
   CountOfBullet: 25
+  ShootPointPos: {x: 1.35, y: -0.45}
   textOFbullets: {fileID: 0}
   SlotSize: 1.35
   SlotCord: {x: 0, y: 0}
+  hotBar: {fileID: 0}
   maxBullet: 0
   Flying: 0
   flySpeed: 10
   rotationDegree: 20
   _shootPoint: {fileID: 0}
-  _canShoot: 0
+  _canShoot: 1

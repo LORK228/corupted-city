@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7109851592433641897}
   - component: {fileID: 7109851592433641898}
   - component: {fileID: 7109851592433641899}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Benelli_M4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,15 +128,17 @@ MonoBehaviour:
   flyDist: 10
   Number: 3
   CountOfBullet: 8
+  ShootPointPos: {x: 1.35, y: -0.5}
   textOFbullets: {fileID: 0}
   SlotSize: 1.3
   SlotCord: {x: -0.031, y: 0}
+  hotBar: {fileID: 0}
   maxBullet: 0
   Flying: 0
   flySpeed: 10
   rotationDegree: 10
   _shootPoint: {fileID: 0}
-  _canShoot: 0
+  _canShoot: 1
 --- !u!114 &7109851592433641899
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,6 @@ public class health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = healthCount.ToString();
+        text.text ="Health: " + healthCount.ToString();
     }
 }

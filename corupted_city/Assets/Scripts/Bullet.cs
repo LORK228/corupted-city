@@ -15,15 +15,16 @@ public class Bullet : MonoBehaviour
     {
         if(collision.GetComponent<EnemyAI>() != null && Ai == false)
             collision.GetComponent<EnemyAI>().Die(transform);
+            print(1);
 
         if (collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 3 && Ai == false)
         {
             Instantiate(particle, transform.position, Quaternion.Euler(-transform.rotation.x, -transform.rotation.y, -transform.rotation.z));
             Destroy(gameObject);
         }
-        
 
-        if (Ai && collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 6)
+
+        if (Ai && collision.gameObject.layer != 2 && collision.GetComponent<Weapon>() == null && collision.gameObject.layer != 6 && !collision.isTrigger)
         {
             if(collision.gameObject.layer == 3)
             {

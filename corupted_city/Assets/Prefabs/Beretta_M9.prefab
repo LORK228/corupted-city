@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1651275611969265891}
   - component: {fileID: 1651275611969265692}
   - component: {fileID: 1651275611969265693}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Beretta_M9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,12 +127,14 @@ MonoBehaviour:
   flyDist: 10
   Number: 1
   CountOfBullet: 7
+  ShootPointPos: {x: 1.13, y: -0.53}
   textOFbullets: {fileID: 0}
   SlotSize: 3
   SlotCord: {x: 0.018, y: 0}
+  hotBar: {fileID: 0}
   maxBullet: 0
   Flying: 0
   flySpeed: 10
   rotationDegree: 20
   _shootPoint: {fileID: 0}
-  _canShoot: 0
+  _canShoot: 1
