@@ -10,13 +10,16 @@ public class Dialog : MonoBehaviour
     [SerializeField] private float speedText;
     [SerializeField] private Text dialogText;
     [SerializeField] private GameObject dialog;
+    [SerializeField] private Transform player;
 
     private bool isIn;
     private bool isDialog;
 
     private int _index;
+    private Quaternion lookForward;
     private void Start()
     {
+        lookForward =  transform.rotation;
         dialogText.text = string.Empty;
         text.text = string.Empty;
         isIn = false;
@@ -25,6 +28,14 @@ public class Dialog : MonoBehaviour
 
     private void Update()
     {
+        if (isIn)
+        {
+            var playerPos = player.position;
+            Vector2 lookDir = new Vector2(playerPos.x, playerPos.y) - new Vector2(transform.position.x, transform.position.y);
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+            var rotationToMouse = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = rotationToMouse;
+        }
         if (Input.GetKeyDown(KeyCode.E) && isIn )
         {
             if (isDialog)
@@ -40,7 +51,8 @@ public class Dialog : MonoBehaviour
             }
         }
     }
-    
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -53,6 +65,7 @@ public class Dialog : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        transform.rotation = lookForward;
         text.text = "";
         dialog.SetActive(false);
         isIn = false;
