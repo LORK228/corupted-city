@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 60
+  particle: {fileID: 2417122545114967993, guid: 014d6700de6aded48b0b10538b78ff29, type: 3}
   Ai: 0
 --- !u!58 &-9145110209875372979
 CircleCollider2D:

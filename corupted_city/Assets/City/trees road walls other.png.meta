@@ -1,0 +1,1476 @@
+fileFormatVersion: 2
+guid: b6162572df1e24b4ba038f037d6a02b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7613122114033446659
+    second: trees road walls other_0
+  - first:
+      213: 8420184895648380529
+    second: trees road walls other_1
+  - first:
+      213: -294148076127061287
+    second: trees road walls other_2
+  - first:
+      213: 8693478157878893059
+    second: trees road walls other_3
+  - first:
+      213: -9036525732068089473
+    second: trees road walls other_4
+  - first:
+      213: -1325280587292767626
+    second: trees road walls other_5
+  - first:
+      213: 7276762734157958521
+    second: trees road walls other_6
+  - first:
+      213: -4069220537776607734
+    second: trees road walls other_7
+  - first:
+      213: -7805877147460046655
+    second: trees road walls other_8
+  - first:
+      213: 3596080434535314894
+    second: trees road walls other_9
+  - first:
+      213: 7134190174478413193
+    second: trees road walls other_10
+  - first:
+      213: 8909526210089125437
+    second: trees road walls other_11
+  - first:
+      213: -1098788345947047308
+    second: trees road walls other_12
+  - first:
+      213: -5637473164717047679
+    second: trees road walls other_13
+  - first:
+      213: -6386731966512986720
+    second: trees road walls other_14
+  - first:
+      213: 5684557422908296378
+    second: trees road walls other_15
+  - first:
+      213: -5779177457192029231
+    second: trees road walls other_16
+  - first:
+      213: 7412342059833785310
+    second: trees road walls other_17
+  - first:
+      213: 5172760367275673476
+    second: trees road walls other_18
+  - first:
+      213: -4035020948978651793
+    second: trees road walls other_19
+  - first:
+      213: -1132541271387660839
+    second: trees road walls other_20
+  - first:
+      213: -1650986510297917313
+    second: trees road walls other_21
+  - first:
+      213: 2789263249370243456
+    second: trees road walls other_22
+  - first:
+      213: -6066957553255683688
+    second: trees road walls other_23
+  - first:
+      213: 516908522856286973
+    second: trees road walls other_24
+  - first:
+      213: 5004875000109503971
+    second: trees road walls other_25
+  - first:
+      213: 7621473251588529351
+    second: trees road walls other_26
+  - first:
+      213: -4460318722923537801
+    second: trees road walls other_27
+  - first:
+      213: 3778361156807233325
+    second: trees road walls other_28
+  - first:
+      213: 8131147104845635072
+    second: trees road walls other_29
+  - first:
+      213: -1410960200803853249
+    second: trees road walls other_30
+  - first:
+      213: -546153041374694472
+    second: trees road walls other_31
+  - first:
+      213: -8104026204556109635
+    second: trees road walls other_32
+  - first:
+      213: -3308831817745786823
+    second: trees road walls other_33
+  - first:
+      213: 4983107060329949151
+    second: trees road walls other_34
+  - first:
+      213: 8934737596852132042
+    second: trees road walls other_35
+  - first:
+      213: 4267129242407766474
+    second: trees road walls other_36
+  - first:
+      213: -5541967197495079234
+    second: trees road walls other_37
+  - first:
+      213: 4309062073696999740
+    second: trees road walls other_38
+  - first:
+      213: 657744830172757913
+    second: trees road walls other_39
+  - first:
+      213: -6857453903566766914
+    second: trees road walls other_40
+  - first:
+      213: 3161363952177364157
+    second: trees road walls other_41
+  - first:
+      213: -2740260380358487562
+    second: trees road walls other_42
+  - first:
+      213: -807442111845829457
+    second: trees road walls other_43
+  - first:
+      213: -7986752683354290017
+    second: trees road walls other_44
+  - first:
+      213: -7322416919683234316
+    second: trees road walls other_45
+  - first:
+      213: 8331816177635818402
+    second: trees road walls other_46
+  - first:
+      213: 3055793661024915401
+    second: trees road walls other_47
+  - first:
+      213: 4284057367073914074
+    second: trees road walls other_48
+  - first:
+      213: 1447865572920942026
+    second: trees road walls other_49
+  - first:
+      213: 6903271113910020441
+    second: trees road walls other_50
+  - first:
+      213: 1314468088839529680
+    second: trees road walls other_51
+  - first:
+      213: 5260803863563202936
+    second: trees road walls other_52
+  - first:
+      213: 1636591483336889999
+    second: trees road walls other_53
+  - first:
+      213: 4952884296168259229
+    second: trees road walls other_54
+  - first:
+      213: -7019675746325882159
+    second: trees road walls other_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trees road walls other_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 373
+        width: 211
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df09d59f5c1c85690800000000000000
+      internalID: -7613122114033446659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 415
+        width: 118
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1763b30fc818ad470800000000000000
+      internalID: 8420184895648380529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 524
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daf41b12e9faebf0800000000000000
+      internalID: -294148076127061287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 369
+        width: 267
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a1df6135075a870800000000000000
+      internalID: 8693478157878893059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_4
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 423
+        width: 275
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71a76869bfc79280800000000000000
+      internalID: -9036525732068089473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_5
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 489
+        width: 67
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a81b6d358ab9de0800000000000000
+      internalID: -1325280587292767626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 472
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d094c17214cf460800000000000000
+      internalID: 7276762734157958521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 420
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ee9150b793787c0800000000000000
+      internalID: -4069220537776607734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_8
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 419
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0fd497714fba390800000000000000
+      internalID: -7805877147460046655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_9
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 209
+        width: 415
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5b5343a18d7e130800000000000000
+      internalID: 3596080434535314894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_10
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 399
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d2ed54a2cb10360800000000000000
+      internalID: 7134190174478413193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_11
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 317
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36056522eef4ab70800000000000000
+      internalID: 8909526210089125437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 318
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47abc7c22d150c0f0800000000000000
+      internalID: -1098788345947047308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_13
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 251
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1804e3a760ca3c1b0800000000000000
+      internalID: -5637473164717047679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_14
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 313
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a58c546d15cd57a0800000000000000
+      internalID: -6386731966512986720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_15
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 329
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc42c9abda93ee40800000000000000
+      internalID: 5684557422908296378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_16
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 317
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3bf1ad8bc3ccfa0800000000000000
+      internalID: -5779177457192029231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_17
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 322
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb7416c4ddedd660800000000000000
+      internalID: 7412342059833785310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_18
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 313
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4878fa7c52659c740800000000000000
+      internalID: 5172760367275673476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_19
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 326
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d2eda43d9b008c0800000000000000
+      internalID: -4035020948978651793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_20
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 321
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd1871d6b76840f0800000000000000
+      internalID: -1132541271387660839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_21
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 33
+        width: 72
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f781bb424848619e0800000000000000
+      internalID: -1650986510297917313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_22
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 317
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081e3cba52475b620800000000000000
+      internalID: 2789263249370243456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_23
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 315
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89962dadf36ddcba0800000000000000
+      internalID: -6066957553255683688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_24
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 315
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa8836109d6c2700800000000000000
+      internalID: 516908522856286973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_25
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 316
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e592ceab43e47540800000000000000
+      internalID: 5004875000109503971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_26
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 318
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc5312ca89e4c960800000000000000
+      internalID: 7621473251588529351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_27
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 273
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a5e17d0c3c912c0800000000000000
+      internalID: -4460318722923537801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_28
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 270
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f01a8147f6f6430800000000000000
+      internalID: 3778361156807233325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_29
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 272
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e15c01633a7d070800000000000000
+      internalID: 8131147104845635072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_30
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 271
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c5fd64c234b6ce0800000000000000
+      internalID: -1410960200803853249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_31
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 280
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3bcd7d3bcab68f0800000000000000
+      internalID: -546153041374694472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_32
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 286
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8d9fa9a17b88f80800000000000000
+      internalID: -8104026204556109635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_33
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 273
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93890c12efaa412d0800000000000000
+      internalID: -3308831817745786823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_34
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 270
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd725b0487d872540800000000000000
+      internalID: 4983107060329949151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_35
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 265
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8d2bd81809efb70800000000000000
+      internalID: 8934737596852132042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_36
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 265
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac985601073e73b30800000000000000
+      internalID: 4267129242407766474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 146
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe407c423af613b0800000000000000
+      internalID: -5541967197495079234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_38
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 175
+        width: 11
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3951d9202ddccb30800000000000000
+      internalID: 4309062073696999740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_39
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 233
+        width: 21
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ffb4b2077c02900800000000000000
+      internalID: 657744830172757913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_40
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 233
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc794ec10e65d0a0800000000000000
+      internalID: -6857453903566766914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_41
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 226
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcb14fc3cb6fdb20800000000000000
+      internalID: 3161363952177364157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_42
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 86
+        width: 16
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1d7acd3b3a8f9d0800000000000000
+      internalID: -2740260380358487562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_43
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 203
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4fcb26da36bc4f0800000000000000
+      internalID: -807442111845829457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_44
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 50
+        width: 307
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9805c700ca592190800000000000000
+      internalID: -7986752683354290017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_45
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 18
+        width: 13
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f588fc7b9c816a90800000000000000
+      internalID: -7322416919683234316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_46
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 122
+        width: 162
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abf5d17bae80a370800000000000000
+      internalID: 8331816177635818402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_47
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 129
+        width: 97
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfc748f42c586a20800000000000000
+      internalID: 3055793661024915401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 60
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcf5d93a77047b30800000000000000
+      internalID: 4284057367073914074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_49
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 31
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd5874411ad71410800000000000000
+      internalID: 1447865572920942026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_50
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 89
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95962d4c0885dcf50800000000000000
+      internalID: 6903271113910020441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_51
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 41
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4eddf23cded3210800000000000000
+      internalID: 1314468088839529680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_52
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 41
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871ffa0bd31220940800000000000000
+      internalID: 5260803863563202936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_53
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 74
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8699b6784756b610800000000000000
+      internalID: 1636591483336889999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_54
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 34
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e38be960e2cb440800000000000000
+      internalID: 4952884296168259229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees road walls other_55
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 39
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da12ddb91a159e90800000000000000
+      internalID: -7019675746325882159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

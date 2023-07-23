@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 44f566a3cecfb904eb3f4e7a98aa4c2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4301430004674909103
+    second: grass wehicles other_0
+  - first:
+      213: 924667372390934095
+    second: grass wehicles other_1
+  - first:
+      213: 3384662677605236189
+    second: grass wehicles other_2
+  - first:
+      213: 4626040560769903226
+    second: grass wehicles other_3
+  - first:
+      213: -6079724147897692928
+    second: grass wehicles other_4
+  - first:
+      213: 4190320875930902052
+    second: grass wehicles other_5
+  - first:
+      213: 5575817368858929192
+    second: grass wehicles other_6
+  - first:
+      213: -7099204165823260026
+    second: grass wehicles other_7
+  - first:
+      213: 1087636913923042267
+    second: grass wehicles other_8
+  - first:
+      213: 8366154711078082407
+    second: grass wehicles other_9
+  - first:
+      213: -864956135168946336
+    second: grass wehicles other_10
+  - first:
+      213: 3607889327220045046
+    second: grass wehicles other_11
+  - first:
+      213: 2579397483313182781
+    second: grass wehicles other_12
+  - first:
+      213: 1381764387641369832
+    second: grass wehicles other_13
+  - first:
+      213: 7833826987089139079
+    second: grass wehicles other_14
+  - first:
+      213: -855517844944547555
+    second: grass wehicles other_15
+  - first:
+      213: 2409793717088139132
+    second: grass wehicles other_16
+  - first:
+      213: 2500339792000275731
+    second: grass wehicles other_17
+  - first:
+      213: 1060568600630741915
+    second: grass wehicles other_18
+  - first:
+      213: -3245830822886390800
+    second: grass wehicles other_19
+  - first:
+      213: -7373190545767190512
+    second: grass wehicles other_20
+  - first:
+      213: 8350757206616092739
+    second: grass wehicles other_21
+  - first:
+      213: -508145166077853408
+    second: grass wehicles other_22
+  - first:
+      213: 4999617430635308945
+    second: grass wehicles other_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grass wehicles other_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 399
+        width: 140
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3dade9ccfb1bb30800000000000000
+      internalID: 4301430004674909103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 462
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4661ca731415dc00800000000000000
+      internalID: 924667372390934095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 288
+        width: 43
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddbe27c5ccb8fe20800000000000000
+      internalID: 3384662677605236189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_3
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 369
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a2d35516ff23040800000000000000
+      internalID: 4626040560769903226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 428
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d8138691b70aba0800000000000000
+      internalID: -6079724147897692928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_5
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 403
+        width: 92
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ed3c8a2a2072a30800000000000000
+      internalID: 4190320875930902052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_6
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 11
+        width: 316
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8282a43ea58416d40800000000000000
+      internalID: 5575817368858929192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_7
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 377
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a9124ac6f8a7d90800000000000000
+      internalID: -7099204165823260026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 337
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb2cfab200181f00800000000000000
+      internalID: 1087636913923042267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 340
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76715c9426d8a1470800000000000000
+      internalID: 8366154711078082407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_10
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 329
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fc5f05afe0ff3f0800000000000000
+      internalID: -864956135168946336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 322
+        width: 13
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4bfd94a3cc11230800000000000000
+      internalID: 3607889327220045046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_12
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 328
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d383b67485cdbc320800000000000000
+      internalID: 2579397483313182781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_13
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 327
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e426a0c3630d2310800000000000000
+      internalID: 1381764387641369832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_14
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 289
+        width: 81
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785115da32857bc60800000000000000
+      internalID: 7833826987089139079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 281
+        width: 72
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1192118d079024f0800000000000000
+      internalID: -855517844944547555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 99
+        width: 10
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77b1093e9e417120800000000000000
+      internalID: 2409793717088139132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_17
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 294
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31553ff1bcdf2b220800000000000000
+      internalID: 2500339792000275731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_18
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 226
+        width: 150
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b478ce585e7be00800000000000000
+      internalID: 1060568600630741915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_19
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 249
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3c7d0501e74f2d0800000000000000
+      internalID: -3245830822886390800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_20
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 247
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0103742734a2da990800000000000000
+      internalID: -7373190545767190512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_21
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 167
+        width: 91
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340b2e96f69d3e370800000000000000
+      internalID: 8350757206616092739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 96
+        width: 227
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0210999e9a4b2f8f0800000000000000
+      internalID: -508145166077853408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass wehicles other_23
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 114
+        width: 233
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1976ed56095326540800000000000000
+      internalID: 4999617430635308945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
