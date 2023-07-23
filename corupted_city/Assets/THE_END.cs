@@ -1,18 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class THE_END : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Text text;
+    [SerializeField] private GameObject exit;
+    
+    private bool isIn;
+    private bool THEEND;
+
     void Start()
     {
-        
+        isIn = false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E) && isIn)
+        {
+            THEEND = true;
+        }
+        if (THEEND)
+        {
+            text.text = "go to the exit";
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            
+            isIn = true;
+
+            text.text = "Press E";
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        text.text = "";
+        isIn = false;
     }
 }
